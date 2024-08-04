@@ -121,6 +121,14 @@
     <Compile Include="Migrations\202407290209178_InitialCreate.Designer.cs">
       <DependentUpon>202407290209178_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408011632026_InitialMigration.cs" />
+    <Compile Include="Migrations\202408011632026_InitialMigration.Designer.cs">
+      <DependentUpon>202408011632026_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408011636585_InitialCreate1.cs" />
+    <Compile Include="Migrations\202408011636585_InitialCreate1.Designer.cs">
+      <DependentUpon>202408011636585_InitialCreate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comida.cs" />
     <Compile Include="Models\HistorialTicket.cs" />
@@ -144,6 +152,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202407290209178_InitialCreate.resx">
       <DependentUpon>202407290209178_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408011632026_InitialMigration.resx">
+      <DependentUpon>202408011632026_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408011636585_InitialCreate1.resx">
+      <DependentUpon>202408011636585_InitialCreate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
