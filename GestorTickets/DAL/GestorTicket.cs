@@ -1,4 +1,12 @@
-﻿using GestorTickets.Models;  // Importa el espacio de nombres que contiene los modelos del proyecto.
+﻿// ************************************************************************
+// Prpyecto 02
+// Josue Chicaiza - Daniel Tapia
+// Fecha de realización: 15/07/2024
+// Fecha de entrega: 05/08/2024
+
+
+
+using GestorTickets.Models;  // Importa el espacio de nombres que contiene los modelos del proyecto.
 using System;  // Espacio de nombres que contiene tipos fundamentales y bases de .NET.
 using System.Collections.Generic;  // Proporciona interfaces y clases genéricas para definir colecciones fuertemente tipadas.
 using System.Data.Entity;  // Proporciona clases y métodos para trabajar con Entity Framework.
