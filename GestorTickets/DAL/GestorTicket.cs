@@ -1,9 +1,9 @@
 ﻿// ************************************************************************
-// Prpyecto 02
+// Proyecto 02
 // Josue Chicaiza - Daniel Tapia
 // Fecha de realización: 15/07/2024
 // Fecha de entrega: 05/08/2024
-
+// ************************************************************************
 
 
 // Importa el espacio de nombres que contiene los modelos del proyecto.
