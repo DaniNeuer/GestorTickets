@@ -111,6 +111,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ComidaController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DAL\GestorTicket.cs" />
@@ -128,6 +129,10 @@
     <Compile Include="Migrations\202408011636585_InitialCreate1.cs" />
     <Compile Include="Migrations\202408011636585_InitialCreate1.Designer.cs">
       <DependentUpon>202408011636585_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408041716240_ActualizarModelos.cs" />
+    <Compile Include="Migrations\202408041716240_ActualizarModelos.Designer.cs">
+      <DependentUpon>202408041716240_ActualizarModelos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comida.cs" />
@@ -158,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408011636585_InitialCreate1.resx">
       <DependentUpon>202408011636585_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408041716240_ActualizarModelos.resx">
+      <DependentUpon>202408041716240_ActualizarModelos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

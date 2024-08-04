@@ -24,5 +24,7 @@ namespace GestorTickets.Models
 
         // Propiedad 'Precio' que almacena el precio de la comida.
         public decimal Precio { get; set; }
+        // Propiedad 'descripcion' que almacena una descripcion de la comida
+        public string Descripcion { get; set; }
     }
 }

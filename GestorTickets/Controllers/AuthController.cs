@@ -63,7 +63,8 @@ namespace GestorTickets.Controllers
         private string GenerateToken(Usuario user)
         {
             // Implementar generación de token
-            return "token" + user.Id + user.Rol;  // Esto es un valor de ejemplo. Aquí se debe implementar la lógica para generar el token real.
+            // Esto es un valor de ejemplo. Aquí se debe implementar la lógica para generar el token real.
+            return "token_" + user.Id+"_"+ user.Rol;  
         }
     }
 }

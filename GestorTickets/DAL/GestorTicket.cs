@@ -43,5 +43,7 @@ namespace GestorTickets.DAL
 
         // Tabla de tickets.
         public DbSet<Ticket> Ticketes { get; set; }
+        
+
     }
 }
