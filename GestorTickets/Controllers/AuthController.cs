@@ -1,22 +1,47 @@
-﻿using GestorTickets.DAL;  // Importa el espacio de nombres para la capa de acceso a datos.
-using GestorTickets.Models;  // Importa el espacio de nombres que contiene los modelos del proyecto.
-using System;  // Espacio de nombres que contiene tipos fundamentales y bases de .NET.
-using System.Collections.Generic;  // Proporciona interfaces y clases genéricas para definir colecciones fuertemente tipadas.
-using System.Linq;  // Proporciona clases e interfaces para consultas en colecciones.
-using System.Net;  // Proporciona la clase de enumeración para el estado del protocolo HTTP.
-using System.Net.Http;  // Proporciona clases para enviar solicitudes HTTP y recibir respuestas HTTP.
-using System.Web.Http;  // Proporciona la clase base para un controlador API en ASP.NET.
+﻿// Importa el espacio de nombres para la capa de acceso a datos.
+using GestorTickets.DAL;
 
-namespace GestorTickets.Controllers  // Define el espacio de nombres para los controladores del proyecto.
+// Importa el espacio de nombres que contiene los modelos del proyecto.
+using GestorTickets.Models;
+
+// Espacio de nombres que contiene tipos fundamentales y bases de .NET.
+using System;
+
+// Proporciona interfaces y clases genéricas para definir colecciones fuertemente tipadas.
+using System.Collections.Generic;
+
+// Proporciona clases e interfaces para consultas en colecciones.
+using System.Linq;
+
+// Proporciona la clase de enumeración para el estado del protocolo HTTP.
+using System.Net;
+
+// Proporciona clases para enviar solicitudes HTTP y recibir respuestas HTTP.
+using System.Net.Http;
+
+// Proporciona la clase base para un controlador API en ASP.NET.
+using System.Web.Http;
+
+// Define el espacio de nombres para los controladores del proyecto.
+namespace GestorTickets.Controllers
 {
-    [RoutePrefix("api/auth")]  // Define la ruta base para todas las acciones en este controlador.
-    public class AuthController : ApiController  // Declara la clase 'AuthController' que hereda de 'ApiController'.
-    {
-        private GestorTicket bd = new GestorTicket();  // Crea una instancia del contexto de datos.
+    // Define la ruta base para todas las acciones en este controlador.
+    [RoutePrefix("api/auth")]
 
-        [HttpPost]  // Indica que este método manejará solicitudes HTTP POST.
-        [Route("login")]  // Define la ruta específica para esta acción.
-        public IHttpActionResult Login([FromBody] LoginModel model)  // Método para manejar la solicitud de inicio de sesión.
+    // Declara la clase 'AuthController' que hereda de 'ApiController'.
+    public class AuthController : ApiController
+    {
+        // Crea una instancia del contexto de datos.
+        private GestorTicket bd = new GestorTicket();
+
+        // Indica que este método manejará solicitudes HTTP POST.
+        [HttpPost]
+
+        // Define la ruta específica para esta acción.
+        [Route("login")]
+
+        // Método para manejar la solicitud de inicio de sesión.
+        public IHttpActionResult Login([FromBody] LoginModel model)
         {
             // Busca el usuario en la base de datos con el nombre de usuario y la contraseña proporcionados.
             var user = bd.Usuarios.FirstOrDefault(u => u.NombreUsuario == model.NombreUsuario && u.Contraseña == model.Contraseña);
