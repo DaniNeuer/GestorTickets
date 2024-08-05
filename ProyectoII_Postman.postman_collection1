@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "1fb70c8c-7435-439f-b301-c073198f52b5",
+		"name": "ProyectoIIDistri",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36154773"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NombreUsuario\": \"Dagmar\",\r\n  \"Contraseña\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"NombreUsuario\": \"Alejandro\",\r\n  \"Contraseña\": \"5555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/usuarios/crear",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"usuarios",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usarTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UsuarioId\": 1,\r\n  \"Cantidad\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/tickets/usar?token=token_1_admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"tickets",
+						"usar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_1_admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarTickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UsuarioId\": 1,\r\n  \"Cantidad\": 6\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/tickets/agregar?token=token_2_admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"tickets",
+						"agregar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_2_admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CantidadTicketCliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/tickets/consultar/3?token=token_3_Cliente",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"tickets",
+						"consultar",
+						"3"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_3_Cliente"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historialCliente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44323/api/tickets/historial/1?token=token_1_Cliente",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"tickets",
+						"historial",
+						"1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_1_Cliente"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PagarComida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UsuarioId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/tickets/pagar?token=token_2_Cliente",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"tickets",
+						"pagar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_2_Cliente"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarComida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"helado\",\r\n  \"Descripcion\": \"helado\",\r\n  \"Precio\": 0.5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/comidas/agregar?token=token_1_admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"comidas",
+						"agregar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_1_admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarComida",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Pizza\",\r\n  \"Descripcion\": \"Deliciosa pizza de queso y pepperoni\",\r\n  \"Precio\": 9.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/comidas/actualizar/1?token=token_1_admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"comidas",
+						"actualizar",
+						"1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_1_admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarComida",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Pizza\",\r\n  \"Descripcion\": \"Deliciosa pizza de queso y pepperoni\",\r\n  \"Precio\": 9.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/comidas/eliminar/4?token=token_1_admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"comidas",
+						"eliminar",
+						"4"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token_1_admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListaComidas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre\": \"Pizza\",\r\n  \"Descripcion\": \"Deliciosa pizza de queso y pepperoni\",\r\n  \"Precio\": 9.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44323/api/comidas/listar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44323",
+					"path": [
+						"api",
+						"comidas",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
